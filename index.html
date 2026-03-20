@@ -18,40 +18,60 @@ background-position: center;
 background-repeat: no-repeat;
 color:black;
 }
-.container{
-text-align:center;
+.wrapper{
+display:grid;
+grid-template-columns: auto auto auto;
+grid-template-rows: auto auto auto;
+align-items:center;
+justify-items:center;
+gap:40px;
 }
 .logo{
-max-width:150px;
+grid-column: 2;
+grid-row: 2;
+max-width:200px;
 width:80%;
 display:block;
-margin:0 auto 40px auto;
 }
-.links{
+.link-top{
+grid-column: 2;
+grid-row: 1;
+}
+.link-bottom{
+grid-column: 2;
+grid-row: 3;
+}
+.link-left{
+grid-column: 1;
+grid-row: 2;
+writing-mode: vertical-rl;
+transform: rotate(180deg);
+}
+.link-right{
+grid-column: 3;
+grid-row: 2;
+writing-mode: vertical-rl;
+}
+a{
 font-size:16px;
 font-weight:700;
-}
-.links a{
 color:white;
 text-decoration:none;
-margin:0 8px;
 -webkit-text-stroke: 0.5px black;
 text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
 }
-.links a:hover{
+a:hover{
 text-decoration:underline;
 }
 </style>
 </head>
 <body>
-<div class="container">
+<div class="wrapper">
+  <a href="mailto:public.amusement@gmx.de" class="link-top">mail</a>
+  <a href="https://t.me/publicamusementberlin" class="link-left">telegram</a>
   <img src="PA Logo Clean.jpg" class="logo" alt="Public Amusement">
-  <div class="links">
-    <a href="mailto:public.amusement@gmx.de">mail</a>
-    <a href="https://t.me/publicamusementberlin">telegram</a>
-    <a href="https://www.instagram.com/publicamusement/">instagram</a>
-    <a href="https://soundcloud.com/public-amusement/">soundcloud</a>
-  </div>
+  <a href="https://www.instagram.com/publicamusement/" class="link-right">instagram</a>
+  <a href="https://soundcloud.com/public-amusement/" class="link-bottom">soundcloud</a>
 </div>
 </body>
 </html>
