@@ -8,6 +8,7 @@ body {
   margin: 0;
   font-family: Arial, Helvetica;
   color: #d2d2ca;
+  letter-spacing: 0.03em;
 }
 
 body::before {
@@ -60,14 +61,14 @@ a:hover {
   margin: 0 auto;
   padding: 0 20px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  gap: 16px;
 }
 
 .logo {
-  max-width: 100px;
+  max-width: 120px;
   width: 100%;
-  margin: 0;
   cursor: pointer;
   opacity: 0.8;
   filter: blur(0.2px);
@@ -79,6 +80,7 @@ a:hover {
   display: flex;
   flex-direction: row;
   gap: 8px;
+  align-items: center;
 }
 
 .link-label {
@@ -100,8 +102,10 @@ a:hover {
 
 .text-element {
   font-size: 15px;
-  display: inline;
+  font-weight: bold;
+  display: block;
   line-height: 1.5;
+  margin-top: 10px;
 }
 
 /* === IMAGES === */
@@ -109,7 +113,6 @@ a:hover {
 .image-link {
   text-decoration: none;
   display: block;
-  margin-top: 8px;
 }
 
 .image-wrapper {
@@ -121,10 +124,6 @@ a:hover {
   display: block;
 }
 
-.image-link:hover .content-image {
-  filter: brightness(0.7);
-}
-
 /* === IFRAMES === */
 
 .external-iframe {
@@ -134,9 +133,8 @@ a:hover {
 /* === RESPONSIVE === */
 
 @media (max-width: 460px) {
-  .container {
-    flex-direction: column-reverse;
-    align-items: flex-start;
-    gap: 10px;
+  .links {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
